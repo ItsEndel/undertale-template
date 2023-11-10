@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdr3vaealajn5"]
+
+[ext_resource type="Script" path="res://scene/Bootloader/Bootloader.cs" id="1_vop6u"]
+
+[node name="Bootloader" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vop6u")
