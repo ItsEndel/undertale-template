@@ -11,6 +11,10 @@ public interface IScene {
         while (true) {
             parent = parent.GetParent();
 
+            if (parent == null) {
+                return null;
+            }
+
             if (parent is IScene scene) {
                 return scene;
             }

@@ -5,7 +5,7 @@ using Godot;
 /// <summary>
 /// 以 Node 为根类型的场景
 /// </summary>
-[GlobalClass]
+[GlobalClass, Icon("res://script/Scene/Scene.svg")]
 public abstract partial class Scene : Node, IScene {
     public IScene GetParentScene() {
         return IScene.GetParentScene(this);

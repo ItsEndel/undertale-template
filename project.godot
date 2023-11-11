@@ -12,7 +12,7 @@ config_version=5
 
 config/name="UndertaleTemplate"
 run/main_scene="res://scene/Game/Game.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
@@ -25,3 +25,7 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="UndertaleTemplate"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

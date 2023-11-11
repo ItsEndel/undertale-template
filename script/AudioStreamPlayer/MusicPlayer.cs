@@ -5,11 +5,13 @@ using Godot;
 /// <summary>
 /// 音乐播放器，在根节点中有实例
 /// </summary>
+[GlobalClass]
 public partial class MusicPlayer : AudioStreamPlayer {
     // 功能变量 //
     /// <summary>
     /// 是否在播放结束后停止音乐
     /// </summary>
+    [Export]
     public bool StopOnFinish = false;
 
 

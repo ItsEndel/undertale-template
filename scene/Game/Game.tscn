@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://db1734mu50bhf"]
+[gd_scene load_steps=3 format=3 uid="uid://db1734mu50bhf"]
 
 [ext_resource type="Script" path="res://scene/Game/Game.cs" id="1_5vi50"]
+[ext_resource type="Script" path="res://script/AudioStreamPlayer/MusicPlayer.cs" id="2_0bi36"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" node_paths=PackedStringArray("MusicPlayer")]
 script = ExtResource("1_5vi50")
+MusicPlayer = NodePath("MusicPlayer")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("2_0bi36")
