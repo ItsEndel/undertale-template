@@ -6,7 +6,7 @@ using Godot;
 /// <summary>
 /// 黑底白框的白框
 /// </summary>
-[GlobalClass, Tool, Icon("res://script/Frame/Frame.svg")]
+[GlobalClass, Tool, Icon("res://icon/Frame.svg")]
 public partial class Frame : Line2D {
     // 构造器 //
     public Frame() {
@@ -14,11 +14,9 @@ public partial class Frame : Line2D {
         this.Texture = FrameTexture;
         this.TextureMode = LineTextureMode.Tile;
 
-        this.Width = 8.0f;
+        this.Width = 10.0f;
 
         this.EndCapMode = LineCapMode.Box;
-
-        this.TopLevel = true;
 
         // 连接信号
         this.ChildEnteredTree += this.OnChildEnteredTree;
@@ -27,7 +25,7 @@ public partial class Frame : Line2D {
 
 
     // 预载资源 //
-    private static Texture2D FrameTexture = GD.Load<Texture2D>("res://asset/texture/UI/frame.png");
+    private static Texture2D FrameTexture = GD.Load<Texture2D>("res://resource/texture/frame.tres");
 
 
 
@@ -60,7 +58,9 @@ public partial class Frame : Line2D {
                     if (body.GetChildOrNull<CollisionPolygon2D>(0) != null) {
                         CollisionPolygon2D polygon = body.GetChildOrNull<CollisionPolygon2D>(0);
 
-                        polygon.Polygon = value;
+                        if (polygon != null) {
+                            polygon.Polygon = value;
+                        }
                     }
                 }
             }
@@ -73,7 +73,15 @@ public partial class Frame : Line2D {
     public override void _Ready()
     {
         // 初始化背景节点
-        Background ??= GetChildOrNull<FrameBackground>(0);
+        if (Background == null) {
+            foreach (Node node in GetChildren()) {
+                if (node is FrameBackground background) {
+                    Background = background;
+                    break;
+                }
+            }
+        }
+        
         if (Background == null) {
             Background = new FrameBackground();
             AddChild(Background);
