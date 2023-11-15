@@ -2,7 +2,7 @@
 
 🚧🚧🚧 This Repository is still under construction 🚧🚧🚧
 
-English / [简体中文](https://github.com/ItsEndel/undertale-template/docs/README-zh_cn.md)
+English / [简体中文](https://github.com/ItsEndel/undertale-template/blob/develop/doc/README-zh_cn.md)
 
 ## Description
 

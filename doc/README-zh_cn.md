@@ -2,7 +2,7 @@
 
 🚧🚧🚧 此仓库仍在建设中 🚧🚧🚧
 
-[English](https://github.com/ItsEndel/undertale-template/README.md) / 简体中文
+[English](https://github.com/ItsEndel/undertale-template/blob/develop/README.md) / 简体中文
 
 ## 简介
 
