@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqgjvuald3pyx"
-path="res://.godot/imported/soul_red.png-4f0a3964e4aca394da303b8795a9cd8e.ctex"
+uid="uid://bt7t3crxuuomh"
+path="res://.godot/imported/mainchara_up_0.png-58a2be2fef6703659f0131ab6b075537.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/texture/battle/soul/soul_red.png"
-dest_files=["res://.godot/imported/soul_red.png-4f0a3964e4aca394da303b8795a9cd8e.ctex"]
+source_file="res://asset/texture/Character/mainchara_up_0.png"
+dest_files=["res://.godot/imported/mainchara_up_0.png-58a2be2fef6703659f0131ab6b075537.ctex"]
 
 [params]
 
