@@ -1,5 +1,11 @@
-# Description
+# Undertale Template
+
+🚧🚧🚧 This Repository is still under construction 🚧🚧🚧
+
+## Description
 
 Undertale Template in Godot Engine
 
-This Repository is still under construction
+## About
+
+By ItsEndel
