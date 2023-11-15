@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 战斗场景
 /// </summary>
-[GlobalClass, Icon("res://script/Battle/Battle.svg")]
+[GlobalClass, Icon("res://icon/Battle.svg")]
 public partial class Battle : Scene2D
 {
     // 功能变量 //

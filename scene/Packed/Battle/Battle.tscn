@@ -1,0 +1,132 @@
+[gd_scene load_steps=11 format=3 uid="uid://bx4tysojbh4v6"]
+
+[ext_resource type="Script" path="res://script/Battle/Battle.cs" id="1_qc5od"]
+[ext_resource type="Texture2D" uid="uid://bmmfdj1f385c" path="res://resource/texture/frame.tres" id="2_1u24q"]
+[ext_resource type="Script" path="res://script/Frame/Frame.cs" id="3_1y5qy"]
+[ext_resource type="Script" path="res://script/Frame/FrameBackground.cs" id="5_m1eow"]
+[ext_resource type="Theme" uid="uid://dijlww8i177qd" path="res://resource/theme/battle_nametag.tres" id="6_qpg25"]
+[ext_resource type="Texture2D" uid="uid://fhtadje2op85" path="res://asset/texture/Battle/hpname.png" id="7_jwfdy"]
+[ext_resource type="Texture2D" uid="uid://b3wog3utc488o" path="res://asset/texture/Battle/krmeter.png" id="8_npge3"]
+[ext_resource type="PackedScene" uid="uid://c42any2fl4nh4" path="res://scene/Packed/Player/Player.tscn" id="9_ticru"]
+
+[sub_resource type="Gradient" id="Gradient_s8yx8"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kjsgm"]
+gradient = SubResource("Gradient_s8yx8")
+width = 1
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_qc5od")
+
+[node name="Frame" type="Line2D" parent="." node_paths=PackedStringArray("Background")]
+light_mask = 3
+position = Vector2(37, 255)
+points = PackedVector2Array(0, 0, 565, 0, 565, 130, 0, 130, 0, 0)
+texture = ExtResource("2_1u24q")
+texture_mode = 1
+end_cap_mode = 1
+antialiased = true
+script = ExtResource("3_1y5qy")
+Background = NodePath("FrameBackground")
+FramePoints = PackedVector2Array(0, 0, 565, 0, 565, 130, 0, 130, 0, 0)
+
+[node name="FrameBackground" type="Polygon2D" parent="Frame"]
+show_behind_parent = true
+clip_children = 2
+texture = SubResource("GradientTexture1D_kjsgm")
+polygon = PackedVector2Array(0, 0, 565, 0, 565, 130, 0, 130, 0, 0)
+script = ExtResource("5_m1eow")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Frame"]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(0, 0, 565, 0, 565, 130, 0, 130, 0, 0)
+
+[node name="Nametag" type="HBoxContainer" parent="."]
+offset_left = 30.0
+offset_top = 400.0
+offset_right = 386.0
+offset_bottom = 427.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("6_qpg25")
+alignment = 1
+
+[node name="Name" type="Control" parent="Nametag"]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Nametag/Name"]
+layout_mode = 0
+offset_right = 75.0
+offset_bottom = 27.0
+text = "ENDEL"
+vertical_alignment = 1
+
+[node name="Level" type="Control" parent="Nametag"]
+custom_minimum_size = Vector2(88, 0)
+layout_mode = 2
+
+[node name="Level" type="Label" parent="Nametag/Level"]
+layout_mode = 0
+offset_right = 69.0
+offset_bottom = 27.0
+size_flags_horizontal = 0
+text = "LV 1"
+vertical_alignment = 1
+
+[node name="HpName" type="TextureRect" parent="Nametag"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_jwfdy")
+stretch_mode = 2
+
+[node name="Placeholder" type="Control" parent="Nametag"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Nametag"]
+custom_minimum_size = Vector2(25, 20)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 20.0
+value = 15.0
+allow_greater = true
+show_percentage = false
+
+[node name="KrMeter" type="HBoxContainer" parent="Nametag"]
+visible = false
+custom_minimum_size = Vector2(34, 0)
+layout_mode = 2
+
+[node name="Placeholder" type="Control" parent="Nametag/KrMeter"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="KrMeter" type="TextureRect" parent="Nametag/KrMeter"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("8_npge3")
+stretch_mode = 2
+
+[node name="Placeholder2" type="Control" parent="Nametag/KrMeter"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Nametag"]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+
+[node name="Health" type="Label" parent="Nametag"]
+layout_mode = 2
+text = "15 / 20"
+vertical_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("9_ticru")]
+position = Vector2(299, 303)
+scale = Vector2(2, 2)
