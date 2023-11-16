@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct0nj25rqe8qf"
-path="res://.godot/imported/mainchara_up_1.png-bc7828da9a2c58542622b3d4e28f27e9.ctex"
+uid="uid://vjx7bnetippq"
+path="res://.godot/imported/mainchara_up_3.png-c1c60a7843708232c8175cb797e073a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/texture/Character/mainchara_up_1.png"
-dest_files=["res://.godot/imported/mainchara_up_1.png-bc7828da9a2c58542622b3d4e28f27e9.ctex"]
+source_file="res://asset/texture/Character/MainChara/normal/mainchara_up_3.png"
+dest_files=["res://.godot/imported/mainchara_up_3.png-c1c60a7843708232c8175cb797e073a5.ctex"]
 
 [params]
 

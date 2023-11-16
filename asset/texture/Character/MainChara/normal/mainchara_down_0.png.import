@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6qv7ok5lwiq1"
-path="res://.godot/imported/mainchara_down_0.png-0e37873e778edd8b7c94112b43acac8c.ctex"
+path="res://.godot/imported/mainchara_down_0.png-a1563fc95506b6be94e396c14fc8dbd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/texture/Character/mainchara_down_0.png"
-dest_files=["res://.godot/imported/mainchara_down_0.png-0e37873e778edd8b7c94112b43acac8c.ctex"]
+source_file="res://asset/texture/Character/MainChara/normal/mainchara_down_0.png"
+dest_files=["res://.godot/imported/mainchara_down_0.png-a1563fc95506b6be94e396c14fc8dbd8.ctex"]
 
 [params]
 
