@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bx4tysojbh4v6"]
 
-[ext_resource type="Script" path="res://script/Battle/Battle.cs" id="1_qc5od"]
+[ext_resource type="Script" path="res://scene/Packed/Battle/Battle.cs" id="1_lb50n"]
 [ext_resource type="Texture2D" uid="uid://bmmfdj1f385c" path="res://resource/texture/frame.tres" id="2_1u24q"]
 [ext_resource type="Script" path="res://script/Frame/Frame.cs" id="3_1y5qy"]
 [ext_resource type="Texture2D" uid="uid://bkbe8d7yy6f5h" path="res://resource/texture/color/black.tres" id="4_1rhmx"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b3wog3utc488o" path="res://asset/texture/Battle/krmeter.png" id="8_npge3"]
 
 [node name="Battle" type="Node2D"]
-script = ExtResource("1_qc5od")
+script = ExtResource("1_lb50n")
 
 [node name="Frame" type="Line2D" parent="." node_paths=PackedStringArray("Background")]
 light_mask = 3
