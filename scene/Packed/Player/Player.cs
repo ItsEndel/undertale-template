@@ -5,7 +5,7 @@ using Godot;
 /// <summary>
 /// 房间内玩家
 /// </summary>
-[GlobalClass]
+[GlobalClass, Icon("res://icon/Player.svg")]
 public partial class Player : CharacterBody2D
 {
     // 节点变量 //
