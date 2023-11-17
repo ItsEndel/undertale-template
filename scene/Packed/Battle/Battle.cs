@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// 战斗场景
 /// </summary>
 [GlobalClass, Icon("res://icon/Battle.svg")]
-public partial class Battle : Scene2D
+public partial class Battle : Node2D, IScene
 {
     // 功能变量 //
     /// <summary>
@@ -23,9 +23,9 @@ public partial class Battle : Scene2D
 
 
     // 场景方法 //
-    public override void Enter(ISceneData data) { }
+    void IScene.Enter(ISceneData data) { }
 
-    public override ISceneData Exit() => null;
+    void IScene.Exit() { }
 
 
 

@@ -6,10 +6,10 @@ using Godot;
 /// 房间场景
 /// </summary>
 [GlobalClass]
-public partial class Room : Scene2D
+public partial class Room : Node2D, IScene
 {
     // 房间方法 //
-    public override void Enter(ISceneData data) { }
+    void IScene.Enter(ISceneData data) { }
 
-    public override ISceneData Exit() => null;
+    void IScene.Exit() { }
 }

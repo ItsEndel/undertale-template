@@ -2,9 +2,9 @@ using Godot;
 
 
 
-public partial class TestFrame : Scene2D
+public partial class TestFrame : Node2D, IScene
 {
-    public override void Enter(ISceneData data) { }
+    void IScene.Enter(ISceneData data) { }
 
-    public override ISceneData Exit() => null;
+    void IScene.Exit() { }
 }

@@ -1,4 +1,3 @@
-using System;
 using Godot;
 
 
@@ -13,12 +12,12 @@ public partial class Game : Node2D, IScene
     /// <summary>
     /// 根节点
     /// </summary>
-    public static Game Root;
+    public static Game Root { get; private set;}
 
     /// <summary>
     /// 全局音乐播放器
     /// </summary>
-    public static MusicPlayer Music;
+    public static MusicPlayer Music { get; private set; }
 
     /// <summary>
     /// 主场景
@@ -26,16 +25,13 @@ public partial class Game : Node2D, IScene
     public static IScene Scene {
         get => scene;
         set {
-            ISceneData data = null;
             if (scene != null && scene is Node lastSceneNode) {
                 lastSceneNode.QueueFree();
-                data = scene.Exit();
             }
 
             scene = null;
 
             if (value is Node sceneNode) {
-                value.Enter(data);
                 Game.Root.AddChild(sceneNode);
 
                 scene = value;
@@ -49,7 +45,7 @@ public partial class Game : Node2D, IScene
 
     // 节点变量 //
     [Export]
-    public MusicPlayer MusicPlayer = new MusicPlayer();
+    public MusicPlayer MusicPlayer = new();
 
     [Export]
     public PackedScene MainScene = GD.Load<PackedScene>("res://scene/Bootloader/Bootloader.tscn");
@@ -59,7 +55,7 @@ public partial class Game : Node2D, IScene
     // 场景方法 //
     void IScene.Enter(ISceneData data) { }
 
-    ISceneData IScene.Exit() => null;
+    void IScene.Exit() { }
 
 
 
