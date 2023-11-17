@@ -10,7 +10,7 @@ using Godot;
 [GlobalClass]
 public partial class Enemy : Node2D, IComparer<Enemy> {
     // 构造器 //
-    public Enemy() {}
+    public Enemy() { }
 
     public Enemy(EnemyResource resource) {
         this.EnemyName = resource.Name;
