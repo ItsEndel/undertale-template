@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://hj511bkhw022"]
 
 [ext_resource type="Script" path="res://scene/TestFrame/TestFrame.cs" id="1_xa4pw"]
-[ext_resource type="Texture2D" uid="uid://bqgjvuald3pyx" path="res://asset/texture/Battle/soul/heart.png" id="2_0fat5"]
+[ext_resource type="Texture2D" uid="uid://bqgjvuald3pyx" path="res://asset/texture/battle/soul/heart.png" id="2_0fat5"]
 [ext_resource type="Script" path="res://script/Frame/Frame.cs" id="2_yre4q"]
 [ext_resource type="Texture2D" uid="uid://bmmfdj1f385c" path="res://resource/texture/frame.tres" id="3_bamag"]
-[ext_resource type="Texture2D" uid="uid://cifrudoi1j3yv" path="res://asset/texture/UI/colors/black.png" id="3_ut8fq"]
+[ext_resource type="Texture2D" uid="uid://bkbe8d7yy6f5h" path="res://resource/texture/color/black.tres" id="5_kgm88"]
 [ext_resource type="Script" path="res://script/Frame/FrameBackground.cs" id="5_u5xv1"]
 
 [node name="TestFrame" type="Node2D"]
@@ -29,7 +29,7 @@ FramePoints = PackedVector2Array(0, 0, 160, 0, 160, 160, 0, 160, 0, 0)
 [node name="FrameBackground" type="Polygon2D" parent="FrameBox"]
 show_behind_parent = true
 clip_children = 2
-texture = ExtResource("3_ut8fq")
+texture = ExtResource("5_kgm88")
 polygon = PackedVector2Array(0, 0, 160, 0, 160, 160, 0, 160, 0, 0)
 script = ExtResource("5_u5xv1")
 
@@ -56,7 +56,7 @@ FramePoints = PackedVector2Array(0, 50, 50, 50, 75, 0, 100, 50, 150, 50, 115, 90
 [node name="FrameBackground" type="Polygon2D" parent="FrameStar"]
 show_behind_parent = true
 clip_children = 2
-texture = ExtResource("3_ut8fq")
+texture = ExtResource("5_kgm88")
 polygon = PackedVector2Array(0, 50, 50, 50, 75, 0, 100, 50, 150, 50, 115, 90, 125, 150, 75, 125, 25, 150, 30, 90, 0, 50, 1, 50)
 script = ExtResource("5_u5xv1")
 
@@ -85,7 +85,7 @@ FramePoints = PackedVector2Array(0, 25, 25, 0, 50, 25, 75, 30, 100, 25, 125, 0, 
 [node name="FrameBackground" type="Polygon2D" parent="FrameShield"]
 show_behind_parent = true
 clip_children = 2
-texture = ExtResource("3_ut8fq")
+texture = ExtResource("5_kgm88")
 polygon = PackedVector2Array(0, 25, 25, 0, 50, 25, 75, 30, 100, 25, 125, 0, 150, 25, 125, 100, 75, 150, 25, 100, 0, 25, 25, 0)
 script = ExtResource("5_u5xv1")
 
@@ -113,7 +113,7 @@ FramePoints = PackedVector2Array(0, 0, 565, 0, 565, 130, 0, 130, 0, 0)
 [node name="FrameBackground" type="Polygon2D" parent="FrameBattle"]
 show_behind_parent = true
 clip_children = 2
-texture = ExtResource("3_ut8fq")
+texture = ExtResource("5_kgm88")
 polygon = PackedVector2Array(0, 0, 565, 0, 565, 130, 0, 130, 0, 0)
 script = ExtResource("5_u5xv1")
 

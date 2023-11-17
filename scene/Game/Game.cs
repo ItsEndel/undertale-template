@@ -26,7 +26,7 @@ public partial class Game : Node2D, IScene
         get => scene;
         set {
             if (scene != null && scene is Node lastSceneNode) {
-                lastSceneNode.QueueFree();
+                Game.Root.RemoveChild(lastSceneNode);
             }
 
             scene = null;
@@ -45,10 +45,10 @@ public partial class Game : Node2D, IScene
 
     // 节点变量 //
     [Export]
-    public MusicPlayer MusicPlayer = new();
+    private MusicPlayer MusicPlayer = new();
 
     [Export]
-    public PackedScene MainScene = GD.Load<PackedScene>("res://scene/Bootloader/Bootloader.tscn");
+    private PackedScene InitScene = GD.Load<PackedScene>("res://scene/Bootloader/Bootloader.tscn");
 
 
 
@@ -67,9 +67,11 @@ public partial class Game : Node2D, IScene
         Game.Music = this.MusicPlayer;
 
         // 初始化根节点
-        Game.Root.AddChild(Game.Music);
+        if (!Game.Music.IsInsideTree()) {
+            Game.Root.AddChild(Game.Music);
+        }
 
         // 加载初始场景
-        Game.Scene = this.MainScene.Instantiate<IScene>();
+        Game.Scene = this.InitScene.Instantiate<IScene>();
     }
 }

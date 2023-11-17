@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://br8vqqq2k4fh2"]
+[gd_scene load_steps=10 format=3 uid="uid://br8vqqq2k4fh2"]
 
 [ext_resource type="Script" path="res://scene/TestRoom/TestRoom.cs" id="1_v1j5k"]
 [ext_resource type="Texture2D" uid="uid://cxuup7uf1nxtq" path="res://asset/texture/TileSet/sanscorridor.png" id="2_vxsqx"]
 [ext_resource type="PackedScene" uid="uid://c42any2fl4nh4" path="res://scene/Packed/Player/Player.tscn" id="3_p425c"]
 [ext_resource type="Texture2D" uid="uid://cyuw4rm15lyrn" path="res://asset/texture/RoomObject/chest.png" id="4_nd0k6"]
-[ext_resource type="Script" path="res://scene/TestRoom/DoorLeft.cs" id="5_ux3r4"]
 [ext_resource type="Texture2D" uid="uid://cs4tyrfsppvvr" path="res://asset/texture/RoomObject/castle_door.png" id="5_w448b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0c62u"]
@@ -253,7 +252,6 @@ limit_bottom = 480
 position = Vector2(160, 100)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("5_ux3r4")
 
 [node name="Sprite" type="Sprite2D" parent="DoorLeft"]
 position = Vector2(0, -30)

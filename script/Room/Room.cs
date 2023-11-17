@@ -8,8 +8,7 @@ using Godot;
 [GlobalClass]
 public partial class Room : Node2D, IScene
 {
-    // 房间方法 //
-    void IScene.Enter(ISceneData data) { }
+    public virtual void Enter(ISceneData data) { }
 
-    void IScene.Exit() { }
+    public virtual void Exit() { }
 }
